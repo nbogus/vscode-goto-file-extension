@@ -11,13 +11,23 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:dev.goto.less",
+        "onCommand:dev.goto.html",
+        "onCommand:dev.goto.ts"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
+            "command": "dev.goto.less",
+            "title": "Go to LESS"
+        },
+        {
+            "command": "dev.goto.html",
+            "title": "Go to HTML"
+        },
+        {
+            "command": "dev.goto.ts",
+            "title": "Go to TS"
         }]
     },
     "scripts": {
