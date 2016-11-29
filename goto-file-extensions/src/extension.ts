@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
     console.log('Congratulations, your extension "goto-file-extensions" is now active!');
-     let disposableLess = vscode.commands.registerCommand('dev.component.less', () => {
+     let disposableLess = vscode.commands.registerCommand('dev.goto.less', () => {
         // The code you place here will be executed every time your command is executed
      let fileName = getFileName(vscode.window.activeTextEditor.document.fileName, 'less');
 
@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
             });
     });
 
-    let disposableHtml = vscode.commands.registerCommand('dev.component.html', () => {
+    let disposableHtml = vscode.commands.registerCommand('dev.goto.html', () => {
         // The code you place here will be executed every time your command is executed
     let fileName = getFileName(vscode.window.activeTextEditor.document.fileName, 'html');
 
@@ -34,7 +34,7 @@ export function activate(context: vscode.ExtensionContext) {
             });
     });
 
-    let disposableTs = vscode.commands.registerCommand('dev.component.ts', () => {
+    let disposableTs = vscode.commands.registerCommand('dev.goto.ts', () => {
         // The code you place here will be executed every time your command is executed
     let fileName = getFileName(vscode.window.activeTextEditor.document.fileName, 'ts');
 
