@@ -1,9 +1,9 @@
 {
-    "name": "goto-file-extensions",
-    "displayName": "goto-file-extensions",
+    "name": "component-shortcut",
+    "displayName": "component-shortcut",
     "description": "",
     "version": "0.0.1",
-    "publisher": "nbogus",
+    "publisher": "foo",
     "engines": {
         "vscode": "^1.5.0"
     },
@@ -11,22 +11,22 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:dev.goto.less",
-        "onCommand:dev.goto.html",
-        "onCommand:dev.goto.ts"
+        "onCommand:dev.component.less",
+        "onCommand:dev.component.html",
+        "onCommand:dev.component.ts"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
-            "command": "dev.goto.less",
+            "command": "dev.component.less",
             "title": "Go to LESS"
         },
         {
-            "command": "dev.goto.html",
+            "command": "dev.component.html",
             "title": "Go to HTML"
         },
         {
-            "command": "dev.goto.ts",
+            "command": "dev.component.ts",
             "title": "Go to TS"
         }]
     },

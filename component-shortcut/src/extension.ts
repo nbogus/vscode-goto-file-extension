@@ -9,8 +9,12 @@ export function activate(context: vscode.ExtensionContext) {
 
     // Use the console to output diagnostic information (console.log) and errors (console.error)
     // This line of code will only be executed once when your extension is activated
-    console.log('Congratulations, your extension "goto-file-extensions" is now active!');
-     let disposableLess = vscode.commands.registerCommand('dev.goto.less', () => {
+    console.log('Congratulations, your extension "component-shortcut" is now active!');
+
+    // The command has been defined in the package.json file
+    // Now provide the implementation of the command with  registerCommand
+    // The commandId parameter must match the command field in package.json
+    let disposableLess = vscode.commands.registerCommand('dev.component.less', () => {
         // The code you place here will be executed every time your command is executed
      let fileName = getFileName(vscode.window.activeTextEditor.document.fileName, 'less');
 
@@ -22,7 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
             });
     });
 
-    let disposableHtml = vscode.commands.registerCommand('dev.goto.html', () => {
+    let disposableHtml = vscode.commands.registerCommand('dev.component.html', () => {
         // The code you place here will be executed every time your command is executed
     let fileName = getFileName(vscode.window.activeTextEditor.document.fileName, 'html');
 
@@ -34,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
             });
     });
 
-    let disposableTs = vscode.commands.registerCommand('dev.goto.ts', () => {
+    let disposableTs = vscode.commands.registerCommand('dev.component.ts', () => {
         // The code you place here will be executed every time your command is executed
     let fileName = getFileName(vscode.window.activeTextEditor.document.fileName, 'ts');
 
@@ -49,7 +53,6 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(disposableLess);
     context.subscriptions.push(disposableHtml);
     context.subscriptions.push(disposableTs);
-
 }
 
 function getFileName(path:string, extension:string) : string
@@ -63,7 +66,6 @@ function getFileName(path:string, extension:string) : string
     return newfilePath;
 }
 
-
+// this method is called when your extension is deactivated
 export function deactivate() {
-    console.log('Congratulations, your extension "goto-file-extensions" is no longer active!');
 }
