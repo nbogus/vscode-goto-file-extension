@@ -13,7 +13,9 @@
     "activationEvents": [
         "onCommand:file.goto.less",
         "onCommand:file.goto.html",
-        "onCommand:file.goto.ts"
+        "onCommand:file.goto.ts",
+        "onCommand:file.goto.css",
+        "onCommand:file.goto.js"
     ],
     "main": "./out/src/extension",
     "contributes": {
@@ -28,6 +30,14 @@
         {
             "command": "file.goto.ts",
             "title": "Go to TS"
+        },
+        {
+            "command": "file.goto.js",
+            "title": "Go to JS"
+        },
+        {
+            "command": "file.goto.css",
+            "title": "Go to CSSS"
         }]
     },
     "scripts": {
