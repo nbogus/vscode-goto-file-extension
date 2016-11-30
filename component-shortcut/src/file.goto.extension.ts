@@ -3,7 +3,6 @@ import * as vscode from 'vscode';
 export class FileGotoExtension {
 
     constructor(){
-
     }
 
     private activeTextEditorFileName = vscode.window.activeTextEditor.document.fileName;

@@ -11,22 +11,22 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:dev.component.less",
-        "onCommand:dev.component.html",
-        "onCommand:dev.component.ts"
+        "onCommand:file.goto.less",
+        "onCommand:file.goto.html",
+        "onCommand:file.goto.ts"
     ],
     "main": "./out/src/extension",
     "contributes": {
         "commands": [{
-            "command": "dev.component.less",
+            "command": "file.goto.less",
             "title": "Go to LESS"
         },
         {
-            "command": "dev.component.html",
+            "command": "file.goto.html",
             "title": "Go to HTML"
         },
         {
-            "command": "dev.component.ts",
+            "command": "file.goto.ts",
             "title": "Go to TS"
         }]
     },
