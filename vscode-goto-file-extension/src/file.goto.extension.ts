@@ -25,7 +25,7 @@ export class FileGotoExtension {
         let file = this.findFileWithExtension(extension);
         if (file !== null) {
             vscode.workspace.openTextDocument(file).then((textDocument) => {
-                vscode.window.showTextDocument(textDocument);
+                vscode.window.showTextDocument(textDocument,vscode.window.activeTextEditor.viewColumn);
             }, (e) => {
                 console.log(e)
             });
